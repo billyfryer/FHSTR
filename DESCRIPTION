@@ -1,15 +1,17 @@
 Package: FHSTR
-Title: What the Package Does (One Line, Title Case)
+Title: 2022 Beijing Olympic Data from NBC's API
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person(given = "Billy",
+           family = "Fryer",
+           role = c("aut", "cre"),
+           email = "billyfryer@att.net")
+Description: This package currently provides data from the 2022 Beijing Olympics from NBC's API. The name of this package comes from the Olympic Motto: "Faster, Higher, Stronger - Together". This package is still a work in progress and new functions will hopefully be added soon! This package will likely be updated to include Paris 2024 Data when that event comes around.
+License: MIT + file LICENSE
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
+LazyData: true
 RoxygenNote: 7.1.2
 Depends: 
     R (>= 2.10)
-LazyData: true
+Imports: 
+    tibble

@@ -10,5 +10,5 @@
 #'   \item{c_SportShort}{chr Abbreviation for Sport}
 #'   \item{b_RecordsAvailable}{logi Useless Column}
 #' }
-#'  @source NBC
+#' @source NBC Olympics API
 "sport_list"

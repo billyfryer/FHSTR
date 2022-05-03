@@ -25,6 +25,9 @@ A data.frame with 285 rows and 16 variables
   \item{n_NrOfBronze}{int Number of Bronze Medals}
 }
 }
+\source{
+NBC Olympics API
+}
 \usage{
 schedule_matrix
 }

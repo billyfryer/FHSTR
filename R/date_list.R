@@ -20,4 +20,6 @@
 #'  \item{c_TimeLastEventLocal}{POSIXct Time of Last Event Locally}
 #'  \item{c_TimeLastEventUTC}{POSIXct Time of Last Event UTC}
 #' }
+#' @source NBC Olympics API
+
 "date_list"

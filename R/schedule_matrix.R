@@ -21,4 +21,6 @@
 #'   \item{n_NrOfSilver}{int Number of Silver Medals}
 #'   \item{n_NrOfBronze}{int Number of Bronze Medals}
 #' } 
+#' @source NBC Olympics API
+
 "schedule_matrix"

@@ -3,7 +3,7 @@
 \docType{data}
 \name{sport_list}
 \alias{sport_list}
-\title{Olympic Sport ID Data}
+\title{Sport List}
 \format{
 A data frame with 15 rows and 5 variables:
 \describe{

@@ -24,6 +24,9 @@ A data.frame with 19 rows and 15 variables
  \item{c_TimeLastEventUTC}{POSIXct Time of Last Event UTC}
 }
 }
+\source{
+NBC Olympics API
+}
 \usage{
 date_list
 }

@@ -1,4 +1,4 @@
-#' Olympic Sport ID Data
+#' Sport List
 #' 
 #' This data set lists all sports competed in the 2022 Beijing Olympics and their respective sportIDs
 #' 

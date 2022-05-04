@@ -33,14 +33,14 @@ devtools::install_github("b4billy/FHSTR")
 
 So far there are 3 pre-loaded data sets in the FHSTR package to help get you started. To learn more about these data sets, uncomment and try the code chunk below!
 
-```{r example}
+```{r builtin, eval=FALSE}
 library(FHSTR)
-# ?sport_list
-# ?date_list
-# ?schedule_matrix
+?sport_list
+?date_list
+?schedule_matrix
 ```
 
 ## Loading Other Data
 
-Functions are currently being written to load other data that has been pulled from the NBC Olympics API. Both pre-parsed CSVs will be availible as well as the raw JSON files.
+Functions are currently being written to load other data that has been pulled from the NBC Olympics API. Both pre-parsed CSVs will be available as well as the raw JSON files.
 

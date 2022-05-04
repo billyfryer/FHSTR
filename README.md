@@ -31,13 +31,13 @@ code chunk below!
 
 ``` r
 library(FHSTR)
-# ?sport_list
-# ?date_list
-# ?schedule_matrix
+?sport_list
+?date_list
+?schedule_matrix
 ```
 
 ## Loading Other Data
 
 Functions are currently being written to load other data that has been
-pulled from the NBC Olympics API. Both pre-parsed CSVs will be availible
+pulled from the NBC Olympics API. Both pre-parsed CSVs will be available
 as well as the raw JSON files.

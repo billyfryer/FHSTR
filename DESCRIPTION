@@ -16,6 +16,7 @@ Depends:
 Imports: 
     tibble,
     data.table,
+    curl,
     dplyr,
     stringr,
     jsonlite

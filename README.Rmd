@@ -40,12 +40,23 @@ library(FHSTR)
 ?schedule_matrix
 ```
 
+## Determining Match IDs
+
+For every event, there is a unique MatchID. To figure out which matchID corresponds to which game use the following code:
+
+```{r matchID, eval = FALSE}
+hockey <- load_olympic_matchID_key(sportID = 113) # Hockey
+```
+
 ## Loading Event Data
 
-Data from the events is availible in 2 different formats: raw JSON files and pre-parsed CSVs. The advantage of having access to the JSON files is that you are able to dig through and find more data available than what is present in the CSVs. This is typically more time consuming. That is why pre-parsed CSVs are available. Sample code below:
+Data from the events is available in 2 different formats: raw JSON files and pre-parsed CSVs. The advantage of having access to the JSON files is that you are able to dig through and find more data available than what is present in the CSVs. This is typically more time consuming. That is why pre-parsed CSVs are available. Sample code below:
 
 ```{r eventdata, eval=FALSE}
+ # W Hockey USA vs Canada CSV Data
 csv_data <- load_olympic_csv_data(sportID = 113, matchID = 746587)
+
+# W Hockey USA vs Canada JSON Data
 json_data <- load_olympic_json_data(sportID = 113, matchID = 746587)
 ```
 
@@ -57,14 +68,31 @@ A sample work flow can be seen below:
 # Call the Package
 library(FHSTR)
 
+# Get Sport List
+sport_list <- FHSTR::sport_list
+
 # Filter to desired Sport
-hockey <- filter(FHSTR::sport_list, c_Sport == "Hockey")
+hockey <- dplyr::filter(sport_list, sport_list$c_Sport == "Hockey")
 
 # Pull the Sport ID
 sportID <- hockey$n_SportID
+
+# Look For USA vs Canada Match Gold Medal W Hockey Match
+all_hockey_matches <- load_olympic_matchID_key(sportID)
+
+# Filter to Only USA vs Canada Matches
+usa_canada <- filter(all_hockey_matches, 
+                     # Team 1 is USA and Team 2 is Canada or Reverse
+                     (Team1 == "USA" & Team2 == "CAN") |
+                     (Team2 == "USA" & Team1 == "CAN") &
+                      Event == "Women's Tournament")
+
+# The Gold Medal match is the second record
+usa_canada_goldID <- usa_canada[2,]$MatchID
+
+# Load CSV and JSON Data
+csv_data <- load_olympic_csv_data(sportID = sportID, 
+                                  matchID = usa_canada_goldID)
+json_data <- load_olympic_json_data(sportID = sportID, 
+                                    matchID = usa_canada_goldID)
 ```
-
-## Loading Multiple Events at Once
-
-For sports like Hockey or Curling, you may want to 
-

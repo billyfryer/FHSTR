@@ -4,22 +4,21 @@
 #' 
 #' @format A data.frame with 285 rows and 16 variables
 #' \describe{
-#'   \item{n_SportID}{int Respective Sport ID for each sport}
-#'   \item{c_Sport}{chr Name of Sport}
-#'   \item{c_SportShort}{chr Abbreviation for Sport}
+#'   \item{SportID}{int Respective Sport ID for each sport}
+#'   \item{Sport}{chr Name of Sport}
+#'   \item{SportShort}{chr Abbreviation for Sport}
 #'   \item{n_DateLocal}{int Date in YYYYMMDD format}
 #'   \item{c_DateLoca}{POSIXCT Date in POSIXCT format}
 #'   \item{d_DateLocal}{chr Date in UNIX format}
-#'   \item{c_TimeFirstEventLocal}{POSIXCT Start time in Beijing in POSIXCT format}
-#'   \item{c_TimeFirstEventUTC}{POSIXCT Start time in UTC in POSIXCT format}
-#'   \item{c_TimeLastEventLocal}{POSIXCT Last time in Beijing in POSIXCT format}
-#'   \item{c_TimeLastEventUTC}{POSIXCT Last time in UTC in POSIXCT format}
-#'   \item{n_NrOfEvents}{int Number of Events}
-#'   \item{n_NrOfPhases}{int Number of Phases}
-#'   \item{n_NrOfMatches}{int Number of Matches}
-#'   \item{n_NrOfGold}{int Number of Gold Medals}
-#'   \item{n_NrOfSilver}{int Number of Silver Medals}
-#'   \item{n_NrOfBronze}{int Number of Bronze Medals}
+#'   \item{TimeFirstEventLocal}{POSIXCT Start time in Beijing in POSIXCT format}
+#'   \item{TimeFirstEventUTC}{POSIXCT Start time in UTC in POSIXCT format}
+#'   \item{TimeLastEventLocal}{POSIXCT Last time in Beijing in POSIXCT format}
+#'   \item{TimeLastEventUTC}{POSIXCT Last time in UTC in POSIXCT format}
+#'   \item{NrOfEvents}{int Number of Events that Day}
+#'   \item{NrOfMatches}{int Number of Matches that Day}
+#'   \item{NrOfGold}{int Number of Gold Medals Awarded that Day}
+#'   \item{NrOfSilver}{int Number of Silver Medals Awarded that Day}
+#'   \item{NrOfBronze}{int Number of Bronze Medals Awarded that Day}
 #' } 
 #' @source NBC Olympics API
 

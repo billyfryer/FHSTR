@@ -26,8 +26,8 @@ devtools::install_github("b4billy/FHSTR")
 ## Preloaded Datasets
 
 So far there are 3 pre-loaded data sets in the FHSTR package to help get
-you started. To learn more about these data sets, uncomment and try the
-code chunk below!
+you started. To learn more about these data sets, try the code chunk
+below!
 
 ``` r
 library(FHSTR)
@@ -36,8 +36,34 @@ library(FHSTR)
 ?schedule_matrix
 ```
 
-## Loading Other Data
+## Loading Event Data
 
-Functions are currently being written to load other data that has been
-pulled from the NBC Olympics API. Both pre-parsed CSVs will be available
-as well as the raw JSON files.
+Data from the events is availible in 2 different formats: raw JSON files
+and pre-parsed CSVs. The advantage of having access to the JSON files is
+that you are able to dig through and find more data available than what
+is present in the CSVs. This is typically more time consuming. That is
+why pre-parsed CSVs are available. Sample code below:
+
+``` r
+csv_data <- load_olympic_csv_data(sportID = 113, matchID = 746587)
+json_data <- load_olympic_json_data(sportID = 113, matchID = 746587)
+```
+
+## Sample Work Flow
+
+A sample work flow can be seen below:
+
+``` r
+# Call the Package
+library(FHSTR)
+
+# Filter to desired Sport
+hockey <- filter(FHSTR::sport_list, c_Sport == "Hockey")
+
+# Pull the Sport ID
+sportID <- hockey$n_SportID
+```
+
+## Loading Multiple Events at Once
+
+For sports like Hockey or Curling, you may want to

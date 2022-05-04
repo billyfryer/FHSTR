@@ -1,18 +1,22 @@
 .datatable.aware <- TRUE
 
-#' Load CSV Data
+#' Load Olympic CSV Data
+#' 
+#' Given a Sport ID and Match ID, load a pre-parsed CSV of data from that event
 #' @author Billy Fryer
-#' @params sportID matchID
+#' @param sportID Sport ID
+#' @param matchID Match ID
 #' @return A data.frame
+#' @importFrom data.table fread
 #' @importFrom dplyr filter
 #' @importFrom stringr str_replace_all
-#' @importFrom data.table fread
 #' @export
 #' @examples 
 #' \donttest{
-#' try(load_csv_data(sportID = 113, matchID = 746587))
+#' load_olympic_csv_data(sportID = 113, matchID = 746587)
 #' }
-load_csv_data <- function(sportID, matchID){
+#' @source NBC API
+load_olympic_csv_data <- function(sportID, matchID){
   
   # Sport List from original repo
   sport_list <- data.table::fread("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/Sport%20List.csv")
@@ -36,20 +40,24 @@ load_csv_data <- function(sportID, matchID){
   return(output)
 }
 
-#' Load JSON Data
+#' Load Olympic JSON Data
+#' 
+#' Given a Sport ID and Match ID, load the raw JSON file
 #' @author Billy Fryer
-#' @params sportID matchID
-#' @return A JSON File
+#' @param sportID Sport ID
+#' @param matchID Match ID
+#' @return Nested Lists in the form of a JSON File
+#' @importFrom data.table fread
 #' @importFrom dplyr filter
 #' @importFrom stringr str_replace_all
-#' @importFrom data.table fread
-#' @importFrom jsonlite fromJSON
+#' @importFrom jsonlite fromJSON 
 #' @export
 #' @examples 
 #' \donttest{
-#' try(load_json_data(sportID = 113, matchID = 746587))
+#' load_olympic_json_data(sportID = 113, matchID = 746587)
 #' }
-load_json_data <- function(sportID, matchID){
+#' @source NBC API
+load_olympic_json_data <- function(sportID, matchID){
   
   # Sport List from original repo
   sport_list <- data.table::fread("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/Sport%20List.csv")

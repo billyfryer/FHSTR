@@ -12,8 +12,7 @@
 #' }
 #' @source NBC API
 load_olympic_matchID_key <- function(sportID) {
-  url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/Match%20ID%20Keys/", sportID, "%20Match%20ID%20Key.csv")
-  
+  url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/Event%20Matches/", sportID, "%20Event%20Matches.csv")
   output <- data.table::fread(url)
   
   return(output)

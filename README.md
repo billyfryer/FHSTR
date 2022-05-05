@@ -42,7 +42,17 @@ For every event, there is a unique MatchID. To figure out which matchID
 corresponds to which game use the following code:
 
 ``` r
-hockey <- load_olympic_matchID_key(sportID = 113) # Hockey
+hockey_matchIDs <- load_olympic_matchID_key(sportID = 113) # Hockey
+```
+
+## Sport Schedules
+
+The sport schedules are similar to the matchID keys except they contain
+more information such as whether medals were awarded or location of
+events. Sport schedules can be found by running the code below:
+
+``` r
+hockey_sport_schedule <- load_olympic_sport_schedules(sportID = 113)
 ```
 
 ## Loading Event Data

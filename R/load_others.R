@@ -17,3 +17,23 @@ load_olympic_matchID_key <- function(sportID) {
   
   return(output)
 }
+
+#' Load Olympic Sport Schedules
+#' 
+#' Given a sportID, list all Sport Schedules
+#' @author Billy Fryer
+#' @param sportID Spor ID
+#' @return A data.frame
+#' @importFrom data.table fread
+#' @export
+#' @examples 
+#' \donttest{
+#' load_olympic_sport_schedules(sportID = 113)
+#' }
+#' @source NBC API
+load_olympic_sport_schedules <- function(sportID) {
+  url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/Sport%20Schedules/", sportID, "%20Sport%20Schedule.csv")
+  output <- data.table::fread(url)
+  
+  return(output)
+}

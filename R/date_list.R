@@ -4,21 +4,21 @@
 #' 
 #' @format A data.frame with 19 rows and 15 variables
 #' \describe{
-#'  \item{Date}{int Date in numeric format YYYYMMDD}
-#'  \item{Current}{logi States whether date is Today which is always False}
-#'  \item{Day}{int Day of Competition (Day of Opening Ceremony = 0)}
-#'  \item{Day}{chr Day of Week}
-#'  \item{DayShort}{chr Abbreviated Day of Week}
-#'  \item{DayNr}{int Day of Month Number}
-#'  \item{WeekDayNr}{int Day of Week Number (Sunday =  1)}
-#'  \item{Month}{chr Month of Competition}
-#'  \item{MonthShort}{chr Abbreviated Month of Competition}
-#'  \item{MonthNr}{int Month Number}
-#'  \item{Year}{int Year}
-#'  \item{TimeFirstEventLocal}{POSIXct Time of First Event Locally}
-#'  \item{TimeFirstEventUTC}{POSIXct Time of First Event UTC}
-#'  \item{TimeLastEventLocal}{POSIXct Time of Last Event Locally}
-#'  \item{TimeLastEventUTC}{POSIXct Time of Last Event UTC}
+#'  \item{n_Date}{int Date in numeric format YYYYMMDD}
+#'  \item{b_Current}{logi States whether date is Today which is always False}
+#'  \item{n_Day}{int Day of Competition (Day of Opening Ceremony = 0)}
+#'  \item{c_Day}{chr Day of Week}
+#'  \item{c_DayShort}{chr Abbreviated Day of Week}
+#'  \item{n_DayNr}{int Day of Month Number}
+#'  \item{n_WeekDayNr}{int Day of Week Number (Sunday =  1)}
+#'  \item{c_Month}{chr Month of Competition}
+#'  \item{c_MonthShort}{chr Abbreviated Month of Competition}
+#'  \item{n_MonthNr}{int Month Number}
+#'  \item{n_Year}{int Year}
+#'  \item{c_TimeFirstEventLocal}{POSIXct Time of First Event Locally}
+#'  \item{c_TimeFirstEventUTC}{POSIXct Time of First Event UTC}
+#'  \item{c_TimeLastEventLocal}{POSIXct Time of Last Event Locally}
+#'  \item{c_TimeLastEventUTC}{POSIXct Time of Last Event UTC}
 #' }
 #' @source NBC Olympics API
 

@@ -88,22 +88,17 @@ hockey <- dplyr::filter(sport_list, sport_list$c_Sport == "Hockey")
 # Pull the Sport ID
 sportID <- hockey$n_SportID
 
-# Look For USA vs Canada Match Gold Medal W Hockey Match
-all_hockey_matches <- load_olympic_matchID_key(sportID)
+# Sport Schedule
+hockey_schedule <- load_olympic_sport_schedules(sportID)
+ 
+gold_medal_match <- dplyr::filter(.data = hockey_schedule, 
+              hockey_schedule$c_ContainerMatch == "Gold Medal Game" &                      hockey_schedule$GenderEvent.c_Name == "Women's Tournament")
 
-# Filter to Only USA vs Canada Matches
-usa_canada <- filter(all_hockey_matches, 
-                     # Team 1 is USA and Team 2 is Canada or Reverse
-                     (Team1 == "USA" & Team2 == "CAN") |
-                     (Team2 == "USA" & Team1 == "CAN") &
-                      Event == "Women's Tournament")
-
-# The Gold Medal match is the second record
-usa_canada_goldID <- usa_canada[2,]$MatchID
+gold_id <- gold_medal_match$Match.n_ID
 
 # Load CSV and JSON Data
 csv_data <- load_olympic_csv_data(sportID = sportID, 
-                                  matchID = usa_canada_goldID)
+                                  matchID = gold_id)
 json_data <- load_olympic_json_data(sportID = sportID, 
-                                    matchID = usa_canada_goldID)
+                                    matchID = gold_id)
 ```

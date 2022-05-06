@@ -52,7 +52,7 @@ load_olympic_json_data <- function(sportID, matchID){
   sport_info <- dplyr::filter(sport_list, sport_list$n_SportID == sportID)
   
   # Create Folder name replacing all spaces with "%20"
-  folder_name <- paste(sportID, sport_info$c_Sport, "JSONs")
+  folder_name <- paste(sportID, "JSONs")
   folder_name <- stringr::str_replace_all(string = folder_name,
                                           pattern = " ",
                                           replacement = "%20")

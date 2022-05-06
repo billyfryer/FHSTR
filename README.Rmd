@@ -68,11 +68,11 @@ csv_data <- load_olympic_csv_data(sportID = 113, matchID = 746587)
 json_data <- load_olympic_json_data(sportID = 113, matchID = 746587)
 ```
 
-## Sample Work Flow
+## Sample Work Flow for Hockey and Curling
 
-A sample work flow can be seen below:
+Due to the nature of their tournaments, Hockey and Curling Function different from the rest of the sports. An example workflow for Hockey and Curling is shown below:
 
-```{r workflow, eval = FALSE}
+```{r workflowhockey, eval = FALSE}
 # Call the Package
 library(FHSTR)
 
@@ -100,6 +100,41 @@ csv_data <- load_olympic_csv_data(sportID = sportID,
                                   matchID = gold_id)
 json_data <- load_olympic_json_data(sportID = sportID, 
                                     matchID = gold_id)
+```
+
+## Sample Workflow for All Other Sports
+
+The following code can be applied to the rest of the sports. Bobsled was selected as an example.
+
+```{r workflowother, eval = FALSE}
+# Call the Package
+library(FHSTR)
+
+# Get Sport List
+sport_list <- FHSTR::sport_list
+
+# Filter to desired Sport
+bobsled <- dplyr::filter(sport_list, sport_list$c_Sport == "Bobsled")
+
+# Pull the Sport ID
+sportID <- bobsled$n_SportID
+
+# Sport Schedule
+bobsled_schedule <- load_olympic_sport_schedules(sportID)
+
+# Monobob Run 4 Data
+monobob <- dplyr::filter(.data = bobsled_schedule, 
+              bobsled_schedule$c_ContainerMatch == "Monobob" &
+              bobsled_schedule$c_Match == "Run 4")
+  
+# Get Match ID
+run4_id <- monobob$n_MatchID
+
+# Load CSV and JSON Data
+csv_data <- load_olympic_csv_data(sportID = sportID, 
+                                  matchID = run4_id)
+json_data <- load_olympic_json_data(sportID = sportID, 
+                                    matchID = run4_id)
 ```
 
 ## Raw Datasets

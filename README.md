@@ -8,10 +8,7 @@
 
 This package currently provides data from the 2022 Beijing Olympics from
 NBC’s API. The name of this package comes from the Olympic Motto:
-“Faster, Higher, Stronger - Together”. This package is still a work in
-progress and new functions will hopefully be added soon! This package
-will likely be updated to include Paris 2024 Data when that event comes
-around.
+“Faster, Higher, Stronger - Together”.
 
 ## Installation
 
@@ -91,8 +88,10 @@ sportID <- hockey$n_SportID
 # Sport Schedule
 hockey_schedule <- load_olympic_sport_schedules(sportID)
  
+# Find Match ID for USA vs Canada Gold Medal Match in Hockey
 gold_medal_match <- dplyr::filter(.data = hockey_schedule, 
-              hockey_schedule$c_ContainerMatch == "Gold Medal Game" &                      hockey_schedule$GenderEvent.c_Name == "Women's Tournament")
+              hockey_schedule$c_ContainerMatch == "Gold Medal Game" &
+              hockey_schedule$GenderEvent.c_Name == "Women's Tournament")
 
 gold_id <- gold_medal_match$Match.n_ID
 
@@ -102,3 +101,9 @@ csv_data <- load_olympic_csv_data(sportID = sportID,
 json_data <- load_olympic_json_data(sportID = sportID, 
                                     matchID = gold_id)
 ```
+
+## Raw Datasets
+
+If you want to use the CSV or JSON data sets outside of R, they are
+available at the at this link: [Beijing 2022 Data
+Repository](https://github.com/b4billy/Beijing-Olympics-Data-Repo/tree/main/Data)

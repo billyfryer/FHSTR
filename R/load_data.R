@@ -45,25 +45,10 @@ load_olympic_csv_data <- function(sportID, matchID){
 #' @source NBC API
 load_olympic_json_data <- function(sportID, matchID){
   
-  # Sport List from original repo
-  sport_list <- data.table::fread("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/Sport%20List.csv")
-  
-  # Filter sport Info to requested sport
-  sport_info <- dplyr::filter(sport_list, sport_list$n_SportID == sportID)
-  
-  # Create Folder name replacing all spaces with "%20"
-  folder_name <- paste(sportID, "JSONs")
-  folder_name <- stringr::str_replace_all(string = folder_name,
-                                          pattern = " ",
-                                          replacement = "%20")
-  
-  # Create Full Path Name
-  urlpart1 <- "https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/"
-  urlpart3 <- paste0("/",matchID,".json")
-  full_url <- paste0(urlpart1, folder_name, urlpart3)
+  url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/",
+                sportID,"%20JSONs/",matchID,".json")
   
   # Read in CSV File from website
-  
-  output <- jsonlite::fromJSON(gsub("\\\\","",readLines(full_url)))
+  output <- data.table::fread(url)
   return(output)
 }

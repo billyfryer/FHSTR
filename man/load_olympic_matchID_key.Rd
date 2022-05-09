@@ -20,7 +20,7 @@ Given a sportID, list all possible matchIDs as well as the corresponding event
 }
 \examples{
 \donttest{
-load_olympic_matchID_key(sportID = 113)
+try(load_olympic_matchID_key(sportID = 113))
 }
 }
 \author{

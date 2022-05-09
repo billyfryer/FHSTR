@@ -8,7 +8,7 @@
 #' @export
 #' @examples
 #' \donttest{
-#' load_olympic_matchID_key(sportID = 113)
+#' try(load_olympic_matchID_key(sportID = 113))
 #' }
 #' @source NBC API
 load_olympic_matchID_key <- function(sportID) {
@@ -30,11 +30,11 @@ load_olympic_matchID_key <- function(sportID) {
 #' @export
 #' @examples 
 #' \donttest{
-#' load_olympic_sport_schedules(sportID = 113)
+#' try(load_olympic_sport_schedules(sportID = 113))
 #' }
 #' @source NBC API
 load_olympic_sport_schedules <- function(sportID) {
-  url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/Sport%20Schedules/", sportID, "%20Sport%20Schedule.csv")
+  url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/Sport-Schedules/", sportID, "%20Sport%20Schedule.csv")
   output <- tryCatch(
     expr = {data.table::fread(url)},
     error = function(err){"sportID does not exist."}

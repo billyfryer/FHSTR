@@ -20,7 +20,7 @@ Given a sportID, list all Sport Schedules
 }
 \examples{
 \donttest{
-load_olympic_sport_schedules(sportID = 113)
+try(load_olympic_sport_schedules(sportID = 113))
 }
 }
 \author{

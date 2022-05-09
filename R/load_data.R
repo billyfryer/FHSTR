@@ -19,7 +19,7 @@
 load_olympic_csv_data <- function(sportID, matchID){
   
   url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/",
-                sportID,"%20CSVs/",matchID,".csv")
+                sportID,"-CSVs/",matchID,".csv")
   
   # Read in CSV File from website
   output <- tryCatch(
@@ -49,7 +49,7 @@ load_olympic_csv_data <- function(sportID, matchID){
 load_olympic_json_data <- function(sportID, matchID){
   
   url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/",
-                sportID,"%20JSONs/",matchID,".json")
+                sportID,"-JSONs/",matchID,".json")
   
   # Read in CSV File from website
   output <- tryCatch(

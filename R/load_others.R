@@ -13,8 +13,10 @@
 #' @source NBC API
 load_olympic_matchID_key <- function(sportID) {
   url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/Event%20Matches/", sportID, "%20Event%20Matches.csv")
-  output <- data.table::fread(url)
-  
+  output <- tryCatch(
+    {data.table::fread(url)},
+    error = function(err){"sportID does not exist."}
+  )  
   return(output)
 }
 
@@ -33,7 +35,9 @@ load_olympic_matchID_key <- function(sportID) {
 #' @source NBC API
 load_olympic_sport_schedules <- function(sportID) {
   url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/Sport%20Schedules/", sportID, "%20Sport%20Schedule.csv")
-  output <- data.table::fread(url)
-  
+  output <- tryCatch(
+    {data.table::fread(url)},
+    error = function(err){"sportID does not exist."}
+    )    
   return(output)
 }

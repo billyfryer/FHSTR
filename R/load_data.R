@@ -22,7 +22,10 @@ load_olympic_csv_data <- function(sportID, matchID){
                 sportID,"%20CSVs/",matchID,".csv")
   
   # Read in CSV File from website
-  output <- data.table::fread(url)
+  output <- tryCatch(
+    {data.table::fread(url)},
+    error = function(err){"Combination of sportID and matchID does not exist."}
+    )
   return(output)
 }
 
@@ -49,6 +52,9 @@ load_olympic_json_data <- function(sportID, matchID){
                 sportID,"%20JSONs/",matchID,".json")
   
   # Read in CSV File from website
-  output <- data.table::fread(url)
+  output <- tryCatch(
+                     {data.table::fread(url)},
+                     error = function(err){"Combination of sportID and matchID does not exist."}
+                     )
   return(output)
 }

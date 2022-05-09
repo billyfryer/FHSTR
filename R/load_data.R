@@ -8,8 +8,6 @@
 #' @param matchID Match ID
 #' @return A data.frame
 #' @importFrom data.table fread
-#' @importFrom dplyr filter
-#' @importFrom stringr str_replace_all
 #' @export
 #' @examples 
 #' \donttest{
@@ -23,7 +21,7 @@ load_olympic_csv_data <- function(sportID, matchID){
   
   # Read in CSV File from website
   output <- tryCatch(
-    {data.table::fread(url)},
+    expr = {data.table::fread(url)},
     error = function(err){"Combination of sportID and matchID does not exist."}
     )
   return(output)
@@ -36,9 +34,6 @@ load_olympic_csv_data <- function(sportID, matchID){
 #' @param sportID Sport ID
 #' @param matchID Match ID
 #' @return Nested Lists in the form of a JSON File
-#' @importFrom data.table fread
-#' @importFrom dplyr filter
-#' @importFrom stringr str_replace_all
 #' @importFrom jsonlite fromJSON 
 #' @export
 #' @examples 
@@ -51,10 +46,10 @@ load_olympic_json_data <- function(sportID, matchID){
   url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/",
                 sportID,"-JSONs/",matchID,".json")
   
-  # Read in CSV File from website
+  # Read in JSON File from website
   output <- tryCatch(
-                     {data.table::fread(url)},
-                     error = function(err){"Combination of sportID and matchID does not exist."}
-                     )
+    expr = {jsonlite::fromJSON(url)},
+    error = function(err){"Combination of sportID and matchID does not exist."}
+    )
   return(output)
 }

@@ -1,4 +1,5 @@
+title: Introduction to FHSTR Package
 url: https://b4billy.github.io/FHSTR/
 template:
   bootstrap: 5
-  bootswatch: cerulean
+  bootswatch: materia

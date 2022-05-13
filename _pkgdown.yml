@@ -3,3 +3,14 @@ url: https://b4billy.github.io/FHSTR/
 template:
   bootstrap: 5
   bootswatch: materia
+  
+development:
+  mode: auto
+  
+authors:
+  Billy Fryer:
+  href: billyfryer.com
+footer:
+  text: "Crafted by"
+sidebar:
+  roles: [aut, cre]

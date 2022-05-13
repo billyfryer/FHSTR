@@ -2,3 +2,16 @@ url: https://b4billy.github.io/FHSTR/
 template:
   bootstrap: 5
   bootswatch: materia
+  theme: breeze-light
+  bslib:
+    base_font: {google: "Open Sans"}
+
+navbar:
+  structure:
+    left:  [intro, reference, articles, tutorials, news]
+    right: [twitter, github]
+  components:
+    twitter:
+      icon: fa-twitter
+      href: http://twitter.com/_b4billy_
+      aria-label: Twitter

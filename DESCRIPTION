@@ -1,6 +1,6 @@
 Package: FHSTR
 Title: 2022 Beijing Olympic Data from NBC's API
-Version: 0.0.0.9000
+Version: 1.0.0.0000
 Authors@R: 
     person(given = "Billy",
            family = "Fryer",

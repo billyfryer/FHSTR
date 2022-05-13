@@ -20,7 +20,8 @@ Imports:
     dplyr,
     stringr,
     jsonlite
-URL: https://b4billy.github.io/FHSTR/
+URL: https://github.com/b4billy/FHSTR,
+    https://b4billy.github.io/FHSTR/
 Suggests: 
     knitr,
     rmarkdown

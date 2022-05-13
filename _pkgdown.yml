@@ -1,12 +1,66 @@
-title: Introduction to FHSTR Package
 url: https://b4billy.github.io/FHSTR/
+title: FHSTR
+description: "Functions to Access 2022 Beijing Olympics Data"
 template:
-  bootstrap: 5
-  bootswatch: materia
+  params:
+    bootswatch: materia
+  opengraph:
+    twitter:
+    creator: "@_b4billy_"
+    card: summary_large_image
   
-development:
-  mode: auto
-  
+toc:
+  depth: 3
+
 authors:
   Billy Fryer:
-  href: billyfryer.com
+   href: billyfryer.com
+home:
+  title: An R package to quickly obtain data from 2022 Olympics from the NBC API
+  description: Functions to Access 2022 Beijing Olympics Data
+  icon: fa-home
+  href: index.html
+navbar:
+  structure:
+    left:  [home, intro, reference, news, games, network, data]
+    right: [twitter, github]
+  title: "hoopR"
+  components:
+    home:
+      title: An R package to quickly obtain data from 2022 Olympics from the NBC API
+      description: Functions to Access 2022 Beijing Olympics Data
+      icon: fa-home
+      href: index.html
+    twitter:
+      icon: "fab fa-twitter fa-lg"
+      href: http://twitter.com/_b4billy_
+    news:
+      icon: "fas fa-newspaper"
+      text: " News"
+      href: news/index.html
+    data:
+      icon: "fas fa-database"
+      text: " Data"
+      menu:
+      - text: "Data Repository"
+        href: https://github.com/b4billy/Beijing-Olympics-Data-Repo
+    reference:
+      icon: "fas fa-code"
+      text: " Funcs"
+      href: reference/index.html
+      menu:
+      - text: "Function Index"
+        href: reference/index.html
+    github:
+      icon: "fab fa-github fa-lg"
+      href: https://github.com/b4billy/FHSTR
+
+reference:
+  - title: FHSTR Package
+  - subtitle: Olympics Data Functions
+    desc: Functions exported by FHSTR to access the hoopR-data repository's NBA Data
+    contents:
+      - '`load_olympic_csv_data `'
+      - '`load_olympic_json_data `'
+      - '`load_olympic_matchID_key`'
+      - '`load_olympic_sport_schedules`'

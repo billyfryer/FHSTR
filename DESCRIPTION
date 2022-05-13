@@ -20,8 +20,9 @@ Imports:
     dplyr,
     stringr,
     jsonlite
-URL: https://b4billy.github.io/FHSTR/
+URL: https://github.com/b4billy/FHSTR
 Suggests: 
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+BugReports: https://github.com/b4billy/FHSTR/issues

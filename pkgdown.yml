@@ -1,0 +1,9 @@
+pandoc: 2.14.2
+pkgdown: 2.0.3
+pkgdown_sha: ~
+articles: {}
+last_built: 2022-05-13T16:03Z
+urls:
+  reference: https://b4billy.github.io/FHSTR/reference
+  article: https://b4billy.github.io/FHSTR/articles
+

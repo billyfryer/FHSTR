@@ -140,6 +140,11 @@ json_data <- load_olympic_json_data(sportID = sportID,
                                     matchID = run4_id)
 ```
 
+**If you want to see a project that uses the FHSTR package, check out
+the [Biathlon Mass Start Clustering
+Project](https://billyfryer.com/projects/beijing-2022-biathlon-mass-start-clustering/)
+that I did!**
+
 ## Raw Datasets
 
 If you want to use the CSV or JSON data sets outside of R, they are

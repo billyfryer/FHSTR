@@ -20,10 +20,10 @@ Imports:
     dplyr,
     stringr,
     jsonlite
-URL: https://github.com/b4billy/FHSTR,
-    https://b4billy.github.io/FHSTR/
+URL: https://github.com/billyfryer/FHSTR,
+    https://billyfryer.github.io/FHSTR/
 Suggests: 
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-BugReports: https://github.com/b4billy/FHSTR/issues
+BugReports: https://github.com/billyfryer/FHSTR/issues

@@ -17,7 +17,7 @@ You can install the development version of FHSTR from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("b4billy/FHSTR")
+devtools::install_github("billyfryer/FHSTR")
 ```
 
 ## Preloaded Datasets
@@ -149,4 +149,4 @@ that I did!**
 
 If you want to use the CSV or JSON data sets outside of R, they are
 available at the at this link: [Beijing 2022 Data
-Repository](https://github.com/b4billy/Beijing-Olympics-Data-Repo/tree/main/Data)
+Repository](https://github.com/billyfryer/Beijing-Olympics-Data-Repo/tree/main/Data)

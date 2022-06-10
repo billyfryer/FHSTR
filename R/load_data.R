@@ -16,7 +16,7 @@
 #' @source NBC API
 load_olympic_csv_data <- function(sportID, matchID){
   
-  url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/",
+  url <- paste0("https://raw.githubusercontent.com/billyfryer/Beijing-Olympics-Data-Repo/main/Data/",
                 sportID,"-CSVs/",matchID,".csv")
   
   # Read in CSV File from website
@@ -43,7 +43,7 @@ load_olympic_csv_data <- function(sportID, matchID){
 #' @source NBC API
 load_olympic_json_data <- function(sportID, matchID){
   
-  url <- paste0("https://raw.githubusercontent.com/b4billy/Beijing-Olympics-Data-Repo/main/Data/",
+  url <- paste0("https://raw.githubusercontent.com/billyfryer/Beijing-Olympics-Data-Repo/main/Data/",
                 sportID,"-JSONs/",matchID,".json")
   
   # Read in JSON File from website

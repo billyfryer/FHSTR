@@ -2,8 +2,8 @@ pandoc: 2.14.2
 pkgdown: 2.0.3
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-06-10T02:43Z
+last_built: 2022-06-10T02:52Z
 urls:
-  reference: https://b4billy.github.io/FHSTR/reference
-  article: https://b4billy.github.io/FHSTR/articles
+  reference: https://billyfryer.github.io/FHSTR/reference
+  article: https://billyfryer.github.io/FHSTR/articles
 
